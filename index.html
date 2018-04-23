@@ -5,9 +5,38 @@
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="table.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<h1 class="title">Company meeting schedule<h1>
 	<table border="2" cellpadding="1" width="100%" id='meetings'> </table>
+	<button id="btn">new meeting</button>
+	<div id="meetbox" class="box">
+		<div class="meeting-content">
+			<span class="close">&times;</span>
+			<table border="2" cellpadding="1" width="100%" id='newmeet'> <tr><th>Meeting</th>
+    			<th>topic</th>
+    			<th>location</th>
+    			<th>details</th>
+    			<th>start time</th>
+    			<th>end time</th>
+    			<th>participants</th></tr>
+    			<tr><td><input type='text' id='meeti'></td>
+    			<td><input type='text' id='topici'></td>
+    			<td><select id='loci'>
+  					<option value="main conferance">main conferance</option>
+  					<option value="war room">war room</option>
+  					<option value="conferance 2">conferance 2</option>
+  					<option value="conferance 3">conferance 3</option>
+				</select></td>
+    			<td><input type='text' id='detaili'></td>
+    			<td><input type='text' id='starti'></td>
+    			<td><input type='text' id='endi'></td>
+    			<td><input type='text' id='participi'></td></tr></table>
+				<button class="createmeeting">create meeting</button>
+			
+		</div>
+	</div>
 </body>
 </html>
+
