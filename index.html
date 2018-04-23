@@ -21,22 +21,84 @@
     			<th>start time</th>
     			<th>end time</th>
     			<th>participants</th></tr>
-    			<tr><td><input type='text' id='meeti'></td>
-    			<td><input type='text' id='topici'></td>
-    			<td><select id='loci'>
-  					<option value="main conferance">main conferance</option>
-  					<option value="war room">war room</option>
-  					<option value="conferance 2">conferance 2</option>
-  					<option value="conferance 3">conferance 3</option>
-				</select></td>
-    			<td><input type='text' id='detaili'></td>
-    			<td><input type='text' id='starti'></td>
-    			<td><input type='text' id='endi'></td>
-    			<td><input type='text' id='participi'></td></tr></table>
-				<button class="createmeeting">create meeting</button>
-			
+    			<tr><td><input type='text' id='meeti' required></td>
+    			<td><input type='text' id='topici' required></td>
+    			<td>
+    				<select id='loci' required>
+  						<option value="main conferance">main conferance</option>
+  						<option value="war room">war room</option>
+  						<option value="conferance 2">conferance 2</option>
+  						<option value="conferance 3">conferance 3</option>
+					</select>
+				</td>
+    			<td><input type='text' id='detaili' required></td>
+    			<td><button id='starti'>start time</button></td>
+    			<td><button id='endi'>end time</button></td>
+    			<td><input type='email' id='participi' required ></td>
+    		</tr>
+    		</table>
+			<button class="createmeeting">create meeting</button>
 		</div>
 	</div>
+	<div class="timebox">
+		<div class="timec">
+			<span class="close2">&times;</span>
+			<table border="2" cellpadding="1" id='timetable'>
+				<tr>
+					<th>Hour</th>
+					<th> </th>
+					<th>minute</th>
+					<th>AM/PM</th>
+				</tr>
+				<tr>
+					<td>
+						<input type='number' min="1" max="12" step="1" id='hour' required patturn="\d+">
+					</td>
+					<td>:</td>
+					<td>
+						<input type='number' min="0" max="59" step="1" id='minute' required patturn="\d+">
+					</td>
+					<td>
+						<select id="ap">
+							<option value="AM">AM</option>
+							<option value="PM">PM</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+			<button class="addtime">add time</button>
+		</div>
+	</div>
+	<div class="timebox2">
+		<div class="timec2">
+			<span class="close3">&times;</span>
+			<table border="2" cellpadding="1" id='timetable2'>
+				<tr>
+					<th>Hour</th>
+					<th> </th>
+					<th>minute</th>
+					<th>AM/PM</th>
+				</tr>
+				<tr>
+					<td>
+						<input type='number' min="1" max="12" step="1" id='hour2' required patturn="\d+">
+					</td>
+					<td>:</td>
+					<td>
+						<input type='number' min="0" max="59" step="1" id='minute2' required patturn="\d+">
+					</td>
+					<td>
+						<select id="ap2">
+							<option value="AM">AM</option>
+							<option value="PM">PM</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+			<button class="addtime2">add time</button>
+		</div>
+	</div>
+
 </body>
 </html>
 
