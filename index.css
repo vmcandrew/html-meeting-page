@@ -1,0 +1,13 @@
+body {
+	background-color: gray;
+}
+.title {
+	text-align: center;
+}
+
+
+
+#meetings tr:hover {
+	background-color: darkgray;
+	cursor: pointer;
+}
