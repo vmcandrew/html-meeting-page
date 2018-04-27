@@ -47,11 +47,22 @@ function create_meeting(){
 	
 }
 
+let min ="";
+let min2 ="";
 function add_stime(){
 	//console.log($('#hour').val());
 	//console.log($('#minute').val());
 	//console.log($('#ap').val());
-	return $('#hour').val() +  ":" +$('#minute').val() + $('#ap').val();
+	if ($('#hour').val() == 0){
+		alert("not a valid time!");
+		//break;
+	}
+	if ($('#minute').val().length == 1){
+		min = '0'+$('#minute').val();
+	} else {
+		min = $('#minute').val();
+	}
+	return $('#hour').val() +  ":" +min + $('#ap').val();
 	//let st = $('#hour').val();
 }
 
@@ -60,7 +71,16 @@ function add_etime(){
 	//console.log($('#hour').val());
 	//console.log($('#minute').val());
 	//console.log($('#ap').val());
-	return $('#hour2').val() +  ":" +$('#minute2').val() + $('#ap2').val();
+	if ($('#hour2').val() == 0){
+		alert("not a valid time!");
+		//break;
+	}
+	if ($('#minute2').val().length == 1){
+		min = '0'+$('#minute2').val();
+	} else {
+		min = $('#minute2').val();
+	}
+	return $('#hour2').val() +  ":" +min2 + $('#ap2').val();
 	//let st = $('#hour').val();
 }
 
@@ -79,6 +99,7 @@ $(document).on("click", ".addtime", function(e){
 	console.log($('.addtime'));
 	st = add_stime();
 	$('.timebox').hide();
+	$('#starti').text(st);
 	//console.log('test');
 	//$('#meetbox').show();
 	$('#meetbox').css("background-color", "rgba(128,128,128,.4)");
@@ -89,6 +110,7 @@ $(document).on("click", ".addtime2", function(e){
 	//console.log($('.addtime2'));
 	et = add_etime();
 	$('.timebox2').hide();
+	$('#endi').text(et);
 	//console.log('test');
 	//$('#meetbox').show();
 	$('#meetbox').css("background-color", "rgba(128,128,128,.4)");
